@@ -84,5 +84,10 @@
       "prettier --trailing-comma es5 --write",
       "git add"
     ]
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/MansoorBashaBellary/picker/issues"
+  },
+  "homepage": "https://github.com/MansoorBashaBellary/picker#readme",
+  "author": "Mansoor Basha Bellary <mbellary@chewy.com> (https://github.com/MansoorBashaBellary)"
 }
