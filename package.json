@@ -1,6 +1,6 @@
 {
-  "name": "flatpickr",
-  "version": "4.5.2",
+  "name": "mansoor-picker",
+  "version": "1.0.5",
   "description": "A lightweight, powerful javascript datetime picker",
   "scripts": {
     "build": "run-s build:pre build:build build:post",
@@ -61,14 +61,17 @@
   "types": "./dist/typings.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chmln/flatpickr.git"
+    "url": "git+https://github.com/MansoorBashaBellary/picker.git"
   },
-  "author": "Gregory <gregory.mkv@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chmln/flatpickr/issues"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
-  "homepage": "https://chmln.github.io/flatpickr",
+  "bugs": {
+    "url": "https://github.com/MansoorBashaBellary/picker/issues"
+  },
+  "homepage": "https://github.com/MansoorBashaBellary/picker#readme",
+  "author": "Mansoor Basha Bellary <mbellary@chewy.com> (https://github.com/MansoorBashaBellary)",
   "keywords": [
     "javascript",
     "datetimepicker",
