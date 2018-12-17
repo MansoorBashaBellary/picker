@@ -3,7 +3,6 @@ import { exec as execCommand } from "child_process";
 
 import * as glob from "glob";
 
-import * as ts from "typescript";
 import * as uglifyJS from "uglify-js";
 
 import * as chokidar from "chokidar";
@@ -46,7 +45,7 @@ const rollupConfig: RollupOptions = {
         // cacheRoot: `/tmp/.rpt2_cache`,
         // clean: true,
         tsconfig: path.resolve("src/tsconfig.json"),
-        typescript: ts,
+        typescript: require("typescript"),
       }),
       rollup_babel({
         runtimeHelpers: true,
@@ -68,15 +67,15 @@ function logErr(e: Error | string) {
 }
 
 function startRollup(dev = false) {
-  return execCommand(
-    `npm run rollup:${dev ? "start" : "build"} --scripts-prepend-node-path`
-  );
+  return execCommand(`npm run rollup:${dev ? "start" : "build"}`);
 }
 
 function resolveGlob(g: string) {
   return new Promise<string[]>((resolve, reject) => {
-    glob(g, (err: Error | null, files: string[]) =>
-      err ? reject(err) : resolve(files)
+    glob(
+      g,
+      (err: Error | null, files: string[]) =>
+        err ? reject(err) : resolve(files)
     );
   });
 }
@@ -174,8 +173,9 @@ async function transpileStyle(src: string, compress = false) {
           browsers: pkg.browserslist,
         })
       )
-      .render((err: Error | undefined, css: string) =>
-        !err ? resolve(css) : reject(err)
+      .render(
+        (err: Error | undefined, css: string) =>
+          !err ? resolve(css) : reject(err)
       );
   });
 }

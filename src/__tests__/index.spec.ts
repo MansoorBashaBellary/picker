@@ -860,14 +860,14 @@ describe("flatpickr", () => {
       fp.currentYearElement.value = "2000";
       simulate("keyup", fp.currentYearElement, KeyboardEvent);
 
-      expect(fp.currentYear).toEqual(2018);
+      expect(fp.currentYear).toEqual(2000);
       incrementTime("currentYearElement", 1);
 
-      expect(fp.currentYear).toEqual(2019);
-      expect(fp.currentYearElement.value).toEqual("2019");
+      expect(fp.currentYear).toEqual(2001);
+      expect(fp.currentYearElement.value).toEqual("2001");
       expect(
         (fp.days.childNodes[10] as DayElement).dateObj.getFullYear()
-      ).toEqual(2019);
+      ).toEqual(2001);
     });
 
     it("time input and increments", () => {
