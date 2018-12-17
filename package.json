@@ -85,6 +85,9 @@
       "git add"
     ]
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "bugs": {
     "url": "https://github.com/MansoorBashaBellary/picker/issues"
   },
