@@ -62,13 +62,9 @@
   "types": "./dist/typings.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chmln/flatpickr.git"
+    "url": "git+https://github.com/MansoorBashaBellary/picker.git"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chmln/flatpickr/issues"
-  },
-  "homepage": "https://chmln.github.io/flatpickr",
   "keywords": [
     "javascript",
     "datetimepicker",
